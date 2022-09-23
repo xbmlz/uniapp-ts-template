@@ -1,16 +1,48 @@
 {
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/tabbar/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "VEnable"
+      }
+    },
+    {
+      "path": "pages/tabbar/me/index",
+      "style": {
+        "navigationBarTitleText": "VEnable"
       }
     }
   ],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#5677FC",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/tabbar/index_default_3x.png",
+        "selectedIconPath": "static/images/tabbar/index_selected_3x.png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "static/images/tabbar/me_default_3x.png",
+        "selectedIconPath": "static/images/tabbar/me_selected_3x.png"
+      }
+    ]
+  },
   "globalStyle": {
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
+  },
+  "resizable": true,
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+    }
   }
 }
