@@ -53,18 +53,18 @@
     "axios": "^0.27.2",
     "pinia": "^2.0.22",
     "vue": "^3.2.39",
-    "vue-i18n": "^9.1.9",
+    "vue-i18n": "^9.2.2",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@dcloudio/types": "^3.0.14",
+    "@dcloudio/types": "^3.0.15",
     "@dcloudio/uni-automator": "3.0.0-alpha-3060320220917001",
     "@dcloudio/uni-cli-shared": "3.0.0-alpha-3060320220917001",
     "@dcloudio/uni-stacktracey": "3.0.0-alpha-3060320220917001",
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3060320220917001",
     "@iconify/json": "^2.1.111",
     "@unocss/preset-icons": "^0.45.22",
-    "@xbmlz/eslint-config": "^0.1.4",
+    "@xbmlz/eslint-config": "^0.1.6",
     "eslint": "^8.23.1",
     "sass": "^1.55.0",
     "terser": "^5.15.0",
@@ -72,6 +72,6 @@
     "unocss": "^0.45.22",
     "unocss-preset-weapp": "^0.1.15",
     "unplugin-auto-import": "^0.11.2",
-    "vite": "^3.1.0"
+    "vite": "^3.1.3"
   }
 }

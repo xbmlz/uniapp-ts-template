@@ -1,9 +1,9 @@
+<script setup lang="ts"></script>
+
 <template>
-  <view>
+  <view class="container">
     <text>首页</text>
   </view>
 </template>
 
-<script setup lang="ts"></script>
-
-<style></style>
+<style lang="scss"></style>

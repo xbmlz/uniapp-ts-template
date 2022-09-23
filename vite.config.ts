@@ -22,6 +22,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       }),
       Unocss(),
     ],
+    optimizeDeps: ['@dcloudio/uni-ui'],
     resolve: {
       alias: [
         {

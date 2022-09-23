@@ -19,13 +19,13 @@
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/tabbar/index/index",
         "text": "首页",
         "iconPath": "static/images/tabbar/index_default_3x.png",
         "selectedIconPath": "static/images/tabbar/index_selected_3x.png"
       },
       {
-        "pagePath": "pages/me/index",
+        "pagePath": "pages/tabbar/me/index",
         "text": "我的",
         "iconPath": "static/images/tabbar/me_default_3x.png",
         "selectedIconPath": "static/images/tabbar/me_selected_3x.png"

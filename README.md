@@ -1,7 +1,7 @@
 # VEnable uniapp
 
 <p align='center'>
-  <img src='https://raw.githubusercontent.com/venable-team/venable-uniapp/main/public/logo.svg' alt='venable-uniapp' width='120'/>
+  <img src='https://raw.githubusercontent.com/venable-team/venable-uniapp/main/src/static/images/logo.png' alt='venable-uniapp' width='120'/>
 </p>
 
 <h1 align="center">VEnable uniapp</h1>
