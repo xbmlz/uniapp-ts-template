@@ -1,18 +1,18 @@
-# VEnable Uniapp
+# VEnable uniapp
 
 <p align='center'>
-  <img src='https://raw.githubusercontent.com/xbmlz/venable-admin/main/public/logo.svg' alt='Hexo-theme-maple' width='120'/>
+  <img src='https://raw.githubusercontent.com/venable-team/venable-uniapp/main/public/logo.svg' alt='venable-uniapp' width='120'/>
 </p>
 
-<h1 align="center">VEnable Uniapp</h1>
+<h1 align="center">VEnable uniapp</h1>
 
 
 <p align="center">
-🚀A modern vue admin. It is based on vue3.x and TypeScript. It's so fast!
+🚀A template for uniapp with vue3.x and TypeScript.
 </p>
 
 <p align="center">
-  <a href="https://xbmlz.github.io/venable-admin/">Live Demo</a>
+  <a href="https://venable-team.github.io/venable-uniapp">Live Demo</a>
 </a>
 
 <p align="center">
@@ -27,13 +27,9 @@
 
 - 🍍 [State Management via Pinia](https://pinia.vuejs.org/)
 
-- 📑 [Arco Design](https://arco.design/vue)
-
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
 
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
-
-- 🗒 [Markdown Support](https://github.com/antfu/vite-plugin-vue-markdown)
 
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
 
@@ -50,7 +46,7 @@
 If you prefer to do it manually with the cleaner git history
 
 ```bash
-npx degit xbmlz/venable-admin my-app
+npx degit venable-team/venable-uniapp my-app
 cd my-app
 pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 ```
@@ -62,7 +58,7 @@ pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
 Just run and visit http://localhost:5173
 
 ```bash
-pnpm dev
+pnpm dev:h5
 ```
 
 ### Build
@@ -70,7 +66,7 @@ pnpm dev
 To build the App, run
 
 ```bash
-pnpm build
+pnpm build:h5
 ```
 
 And you will see the generated file in `dist` that ready to be served.
