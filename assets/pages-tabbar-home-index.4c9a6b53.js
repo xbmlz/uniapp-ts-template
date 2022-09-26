@@ -1,0 +1,1 @@
+import{o as a,c as s,w as e,e as r,a as t,b as n,f as o}from"./index.f07c6412.js";import{_ as f}from"./plugin-vue_export-helper.f63bf49c.js";const c=f({},[["render",function(f,c){const l=o,u=r;return a(),s(u,{class:"container"},{default:e((()=>[t(l,null,{default:e((()=>[n("首页")])),_:1})])),_:1})}]]);export{c as default};
