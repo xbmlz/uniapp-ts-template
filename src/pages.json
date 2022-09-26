@@ -1,15 +1,22 @@
 {
   "pages": [
     {
-      "path": "pages/tabbar/index/index",
+      "path": "pages/login/index",
       "style": {
-        "navigationBarTitleText": "VEnable"
+        "navigationBarTitleText": "登录"
+      }
+    },
+    {
+      "path": "pages/tabbar/home/index",
+      "style": {
+        "navigationBarTitleText": "首页"
       }
     },
     {
       "path": "pages/tabbar/me/index",
       "style": {
-        "navigationBarTitleText": "VEnable"
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
       }
     }
   ],
@@ -19,16 +26,16 @@
     "backgroundColor": "#FFFFFF",
     "list": [
       {
-        "pagePath": "pages/tabbar/index/index",
+        "pagePath": "pages/tabbar/home/index",
         "text": "首页",
-        "iconPath": "static/images/tabbar/index_default_3x.png",
-        "selectedIconPath": "static/images/tabbar/index_selected_3x.png"
+        "iconPath": "static/images/tabbar/index_default.png",
+        "selectedIconPath": "static/images/tabbar/index_selected.png"
       },
       {
         "pagePath": "pages/tabbar/me/index",
         "text": "我的",
-        "iconPath": "static/images/tabbar/me_default_3x.png",
-        "selectedIconPath": "static/images/tabbar/me_selected_3x.png"
+        "iconPath": "static/images/tabbar/me_default.png",
+        "selectedIconPath": "static/images/tabbar/me_selected.png"
       }
     ]
   },
