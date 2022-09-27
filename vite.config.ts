@@ -16,7 +16,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       uni(),
       // https://github.com/antfu/unplugin-auto-import
       AutoImport({
-        imports: ['vue', 'uni-app'],
+        imports: ['vue', '@vueuse/core', 'uni-app'],
         dts: 'src/auto-imports.d.ts',
         vueTemplate: true,
       }),

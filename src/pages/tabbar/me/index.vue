@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { useAppStore } from '@/store'
+import { useAppStore, useUserStore } from '@/store'
 import defaultAvatar from '@/static/images/me/me_avatar.png'
 import { actionList } from './data'
 
 const appStore = useAppStore()
+const userStore = useUserStore()
 
-const userInfo = reactive({
-  nickName: 'chen.xc',
-  avatar: defaultAvatar,
-  vCoin: 100,
+const userInfo = computed(() => {
+  return userStore.getUserInfo
 })
 
 const titleStyle = computed(() => {
@@ -35,11 +34,11 @@ const titleStyle = computed(() => {
     >
       <!-- avatar -->
       <view class="flex flex-1 items-center mr-20">
-        <image class="w-120 h-120 rd-50%" :src="userInfo.avatar" />
-        <text class="ml-2 c-white"> {{ userInfo.nickName }}</text>
+        <image class="w-120 h-120 rd-50%" :src="defaultAvatar" />
+        <text class="ml-2 c-white"> {{ userInfo.realName || '未登录' }}</text>
       </view>
       <!-- action -->
-      <text class="ml-2 c-white mr-2">V币: {{ userInfo.vCoin }}</text>
+      <text class="ml-2 c-white mr-2">V币: 1000</text>
     </view>
     <!-- action list -->
     <view class="action-box">

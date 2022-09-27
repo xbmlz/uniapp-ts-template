@@ -2,13 +2,14 @@
 import { useAppStore } from '@/store'
 const appStore = useAppStore()
 onLaunch(() => {
-  // console.log('App Launch')
+  // App Launch
   appStore.initSystemInfo()
 })
 onShow(() => {
-  // console.log('App Show')
+  // App Show
+  appStore.checkUpdate()
 })
 onHide(() => {
-  // console.log('App Hide')
+  // App Hide
 })
 </script>
