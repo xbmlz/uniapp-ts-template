@@ -1,3 +1,4 @@
+import { getToken } from '@/utils/auth'
 export interface Result<T = any> {
   code: number
   msg: string
@@ -16,6 +17,7 @@ type MethodType =
 
 class Request {
   public request(method: MethodType, url: string, data: any) {
+    const token = getToken()
     return new Promise((resolve, reject) => {
       let result
       uni.request({
@@ -23,6 +25,7 @@ class Request {
         method,
         timeout: 15000,
         header: {
+          Authorization: token ? token : '',
           'content-type':
             method === 'GET'
               ? 'application/json; charset=utf-8'
@@ -37,7 +40,14 @@ class Request {
           reject(err)
         },
         complete: () => {
-          resolve(result)
+          const { code, msg, data } = result
+          const hasSuccess = result && Reflect.has(result, 'code') && code === 0
+          if (hasSuccess) {
+            resolve(data)
+          } else {
+            uni.showToast({ title: msg, icon: 'error' })
+            reject(new Error(msg || 'Error'))
+          }
         },
       })
     })

@@ -13,11 +13,6 @@ export const useAppStore = defineStore({
     getSystemInfo() {
       return this.systemInfo
     },
-    getNavHeight() {
-      const mbRect = uni.getMenuButtonBoundingClientRect()
-      const sbHeight = this.systemInfo.statusBarHeight
-      return sbHeight + mbRect.height + (mbRect.top - sbHeight) * 2
-    },
   },
   actions: {
     setSystemInfo(info: UniApp.GetSystemInfoResult) {
@@ -32,7 +27,6 @@ export const useAppStore = defineStore({
           console.error(err)
         },
       })
-      uni.getMenuButtonBoundingClientRect
     },
     checkUpdate() {
       const updateManager = uni.getUpdateManager()

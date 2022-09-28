@@ -4,6 +4,14 @@ export interface LoginParams {
 }
 
 export interface LoginResult {
-  realName: string
+  userId: string
+  token: string
+}
+
+export interface UserInfoResult {
   phone: string
+  realName: string
+  avatarUrl: string
+  nickName: string
+  vb: number
 }

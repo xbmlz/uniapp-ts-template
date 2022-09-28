@@ -1,12 +1,6 @@
 {
   "pages": [
     {
-      "path": "pages/login/index",
-      "style": {
-        "navigationBarTitleText": "登录"
-      }
-    },
-    {
       "path": "pages/tabbar/home/index",
       "style": {
         "navigationBarTitleText": "首页"
@@ -16,6 +10,13 @@
       "path": "pages/tabbar/me/index",
       "style": {
         "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/login/index",
+      "style": {
+        "navigationBarTitleText": "登录",
         "navigationStyle": "custom"
       }
     }

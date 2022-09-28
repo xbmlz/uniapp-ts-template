@@ -10,8 +10,13 @@ const { loading, setLoading } = useLoading()
 
 const userStore = useUserStore()
 
+const loginForm = reactive({
+  phone: '18519004150',
+  code: '123456',
+})
+
 const sendCode = async () => {
-  if (!isPhone(loginForm.phone)) {
+  if (validatePhone()) {
     uni.showToast({ title: '请输入正确的手机号', icon: 'none' })
     return
   }
@@ -24,16 +29,7 @@ const sendCode = async () => {
   }
 }
 
-const loginForm = reactive({
-  phone: '18519004150',
-  code: '',
-})
-
-const validateForm = (): boolean => {
-  if (!isPhone(loginForm.phone)) {
-    uni.showToast({ title: '请输入正确的手机号', icon: 'none' })
-    return false
-  }
+const validateCode = (): boolean => {
   if (!loginForm.code) {
     uni.showToast({ title: '请输入验证码', icon: 'none' })
     return false
@@ -41,13 +37,25 @@ const validateForm = (): boolean => {
   return true
 }
 
+const validatePhone = (): boolean => {
+  if (!isPhone(loginForm.phone)) {
+    uni.showToast({ title: '请输入正确的手机号', icon: 'none' })
+    return false
+  }
+  return true
+}
+
 const loginHandle = async () => {
   if (loading.value) return
-  if (!validateForm()) return
+  if (!validateCode() && !validatePhone()) return
   setLoading(true)
   try {
     await userStore.login(loginForm)
-  } catch {}
+    uni.showToast({ title: '登录成功' })
+    uni.switchTab({ url: '/pages/tabbar/home/index' })
+  } finally {
+    setLoading(false)
+  }
 }
 
 const wxLoginHandle = (e: any) => {

@@ -1,26 +1,33 @@
 import { defineStore } from 'pinia'
 import UserApi from '@/api/user'
+import { getToken, removeToken, setToken } from '@/utils/auth'
 import type { LoginParams } from '@/api/user/model'
 
 interface UserState {
+  token: string
   realName: string
   phone: number
-  token: string
+  avatarUrl: string
+  nickName: string
+  vb: number
 }
 
 export const useUserStore = defineStore({
   id: 'user',
   state: (): UserState => ({
+    token: undefined,
     realName: undefined,
     phone: undefined,
-    token: undefined,
+    avatarUrl: undefined,
+    nickName: undefined,
+    vb: 0,
   }),
   getters: {
     getUserInfo(state: UserState): UserState {
       return { ...state }
     },
     getToken() {
-      return this.token || (uni.getStorageSync('USER_TOKEN') as string)
+      return this.token || getToken()
     },
   },
   actions: {
@@ -29,20 +36,31 @@ export const useUserStore = defineStore({
     },
     setToken(token: string) {
       this.token = token || ''
-      uni.setStorageSync('USER_TOKEN', token)
+      setToken(token)
     },
     resetUserInfo() {
       this.$reset()
+      removeToken()
     },
     // 登录
     async login(loginForm: LoginParams) {
       // 账号密码登录
-      const data = UserApi.login(loginForm)
+      const data = await UserApi.login(loginForm)
       const { token } = data
       this.setToken(token)
-      // TODO get user info
-      return data
+      // 获取用户信息
+      const info = await UserApi.getUserInfo()
+      this.setUserInfo(info)
+      return info
     },
+    async logout() {
+      if (this.token) {
+        await UserApi.logout()
+      }
+      this.resetUserInfo()
+      uni.reLaunch({ url: '/pages/login/index' })
+    },
+
     // 小程序授权登录
     // async authLogin(provider = 'weixin') {
     //   uni.login({
