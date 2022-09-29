@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
+import type { LoginParams } from '@/api/user/model'
 import UserApi from '@/api/user'
 import { getToken, removeToken, setToken } from '@/utils/auth'
-import type { LoginParams } from '@/api/user/model'
 
 interface UserState {
   token: string

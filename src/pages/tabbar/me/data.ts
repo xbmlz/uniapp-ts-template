@@ -15,4 +15,9 @@ export const actionList: ActionProps[] = [
     title: 'V币记录',
     icon: '../../../static/images/me/action_vb_record.png',
   },
+  {
+    name: 'logout',
+    title: '退出登录',
+    icon: '../../../static/images/me/action_logout.png',
+  },
 ]

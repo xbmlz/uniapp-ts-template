@@ -1,5 +1,5 @@
-import request from '@/utils/request'
 import type { LoginParams, LoginResult, UserInfoResult } from './model'
+import request from '@/utils/request'
 
 enum Path {
   Login = '/login',
