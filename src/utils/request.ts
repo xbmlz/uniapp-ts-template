@@ -53,7 +53,7 @@ class Request {
     })
   }
 
-  public get<T = any>(url: string, data: any): Promise<T> {
+  public get<T = any>(url: string, data?: any): Promise<T> {
     return this.request('GET', url, data)
   }
 
