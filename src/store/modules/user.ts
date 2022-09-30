@@ -6,7 +6,7 @@ import { getToken, removeToken, setToken } from '@/utils/auth'
 interface UserState {
   token: string
   realName: string
-  phone: number
+  phone: string
   avatarUrl: string
   nickName: string
   vb: number
@@ -15,18 +15,18 @@ interface UserState {
 export const useUserStore = defineStore({
   id: 'user',
   state: (): UserState => ({
-    token: undefined,
-    realName: undefined,
-    phone: undefined,
-    avatarUrl: undefined,
-    nickName: undefined,
+    token: '',
+    realName: '',
+    phone: '',
+    avatarUrl: '',
+    nickName: '',
     vb: 0,
   }),
   getters: {
     getUserInfo(state: UserState): UserState {
       return { ...state }
     },
-    getToken() {
+    getToken(): string {
       return this.token || getToken()
     },
   },

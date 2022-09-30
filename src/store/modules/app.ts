@@ -7,10 +7,10 @@ interface AppState {
 export const useAppStore = defineStore({
   id: 'id',
   state: (): AppState => ({
-    systemInfo: undefined,
+    systemInfo: {} as UniApp.GetSystemInfoResult,
   }),
   getters: {
-    getSystemInfo() {
+    getSystemInfo(): UniApp.GetSystemInfoResult {
       return this.systemInfo
     },
   },

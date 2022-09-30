@@ -16,10 +16,10 @@ type MethodType =
   | 'CONNECT'
 
 class Request {
-  public request(method: MethodType, url: string, data: any) {
+  public request(method: MethodType, url: string, data?: any) {
     const token = getToken()
     return new Promise((resolve, reject) => {
-      let result
+      let result: any
       uni.request({
         url: import.meta.env.VITE_BASE_URL + url,
         method,
@@ -53,12 +53,12 @@ class Request {
     })
   }
 
-  public get<T = any>(url: string, data?: any): Promise<T> {
-    return this.request('GET', url, data)
+  public get<T = any>(url: string, data?: any) {
+    return this.request('GET', url, data) as T
   }
 
-  public post<T = any>(url: string, data: any): Promise<T> {
-    return this.request('POST', url, data)
+  public post<T = any>(url: string, data: any) {
+    return this.request('POST', url, data) as T
   }
 }
 

@@ -1,5 +1,5 @@
 import { createSSRApp } from 'vue'
-// https://vkuviewdoc.fsq.pub/
+// @ts-expect-error https://vkuviewdoc.fsq.pub/
 import uView from './uni_modules/vk-uview-ui'
 import App from './App.vue'
 import store from './store'

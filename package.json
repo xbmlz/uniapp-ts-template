@@ -34,7 +34,8 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "lint": "eslint . --ext .js,.ts,.json,.json5,.vue,.md --fix"
+    "lint": "eslint . --ext .js,.ts,.json,.json5,.vue,.md --fix",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-3060320220917001",
