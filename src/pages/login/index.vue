@@ -28,7 +28,7 @@ const contenStyle = computed(() => {
 const codeRef = ref()
 const tips = ref('')
 const isWaitCode = ref(false)
-const codeChange = (text: string) => {
+const codeChange = (text: any) => {
   tips.value = text
 }
 
@@ -168,7 +168,7 @@ const goAgreement = () => {
             </button>
           </view>
           <view class="line">
-            <view class="tip"> 微信登录 </view>
+            <view class="tip">微信登录</view>
           </view>
         </view>
       </view>

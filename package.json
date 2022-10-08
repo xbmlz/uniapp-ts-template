@@ -65,7 +65,7 @@
     "@dcloudio/vite-plugin-uni": "3.0.0-alpha-3060320220917001",
     "@iconify/json": "^2.1.113",
     "@unocss/preset-icons": "^0.45.25",
-    "@venable/eslint-config": "^0.0.2",
+    "@xbmlz/eslint-config": "^0.1.15",
     "eslint": "^8.24.0",
     "sass": "^1.55.0",
     "terser": "^5.15.0",
