@@ -1,0 +1,55 @@
+{
+  "view": {
+    "prefix": "view",
+    "body": ["<view class=\"$1\">", "\t$0", "</view>"],
+    "description": "view"
+  },
+  "text": {
+    "prefix": "text",
+    "body": ["<text class=\"$1\">", "\t$2", "</text>", "$0"],
+    "description": "text"
+  },
+  "image": {
+    "prefix": "image",
+    "body": ["<image :src=\"$1\" class=\"$2\" mode=\"widthFix\" />$0"],
+    "description": "image"
+  },
+  "icon": {
+    "prefix": "icon",
+    "body": ["<i class=\"iconfont icon-$1\"/>$0"],
+    "description": "icon"
+  },
+  "navigator": {
+    "prefix": "navigator",
+    "body": [
+      "<navigator url=\"$1\" class=\"$2\">",
+      "\t$3",
+      "</navigator>",
+      "$0"
+    ],
+    "description": "navigator"
+  },
+  "scroll-view": {
+    "prefix": "scroll-view",
+    "body": ["<scroll-view", "\tscroll-y >", "\t$0", "</scroll-view>"],
+    "description": "scroll-view"
+  },
+  "swiper": {
+    "prefix": "swiper",
+    "body": [
+      "<swiper",
+      "\tindicator-dots",
+      "\tautoplay",
+      "\tcircular",
+      "\t>",
+      "\t<swiper-item",
+      "\t\tclass=\"swiper_item\"",
+      "\t\t$1",
+      "\t\t>",
+      "\t\t$0",
+      "\t</swiper-item>",
+      "</swiper>"
+    ],
+    "description": "swiper"
+  }
+}
