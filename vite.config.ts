@@ -1,4 +1,5 @@
 import path from 'node:path'
+import type { ConfigEnv, UserConfig } from 'vite'
 import { defineConfig, loadEnv } from 'vite'
 import uni from '@dcloudio/vite-plugin-uni'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -29,13 +30,13 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
       alias: [
         {
           find: '@',
-          replacement: path.resolve(__dirname, './src'),
+          replacement: path.resolve(root, './src'),
         },
       ],
-      server: {
-        host: true,
-        port: Number(VITE_PORT),
-      },
+    },
+    server: {
+      host: true,
+      port: Number(VITE_PORT),
     },
   }
 })
