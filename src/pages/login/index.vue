@@ -52,9 +52,16 @@ const validatePhone = (): boolean => {
   return true
 }
 
+const validateAgree = (): boolean => {
+  if (!loginForm.agree) {
+    uni.showToast({ title: '请先阅读并同意用户协议', icon: 'none' })
+    return false
+  }
+  return true
+}
+
 const sendCode = async () => {
   if (!validatePhone()) {
-    uni.showToast({ title: '请输入正确的手机号', icon: 'none' })
     return
   }
   try {
@@ -77,6 +84,7 @@ const sendCode = async () => {
 }
 
 const doLogin = async () => {
+  if (!validateAgree()) return
   setLoading(true)
   try {
     await userStore.login(loginForm)
@@ -152,7 +160,12 @@ const goAgreement = () => {
         </view>
 
         <view class="login-action">
-          <u-button class="w-600 mb-6" type="primary" @click="phoneLoginHandle">
+          <u-button
+            class="w-600 mb-6"
+            type="primary"
+            :loading="loading"
+            @click="phoneLoginHandle"
+          >
             手机号登录
           </u-button>
           <view>
