@@ -24,6 +24,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
         dts: 'src/auto-imports.d.ts',
         vueTemplate: true,
       }),
+      // https://github.com/unocss/unocss
       Unocss(),
     ],
     resolve: {

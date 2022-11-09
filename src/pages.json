@@ -25,6 +25,13 @@
       "style": {
         "navigationBarTitleText": "服务须知"
       }
+    },
+    {
+      "path": "pages/share/index",
+      "style": {
+        "navigationBarTitleText": "分享",
+        "navigationStyle": "custom"
+      }
     }
   ],
   "tabBar": {

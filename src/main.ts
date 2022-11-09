@@ -9,6 +9,7 @@ export function createApp() {
   const app = createSSRApp(App)
   app.use(store)
   app.use(uView)
+
   return {
     app,
   }

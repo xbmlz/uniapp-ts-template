@@ -29,6 +29,12 @@
 
 - 🎨 [UnoCSS](https://github.com/antfu/unocss) - the instant on-demand atomic CSS engine
 
+- 🖼️ [vk-uview-ui](https://vkuviewdoc.fsq.pub/) - a UI library for uniapp based on Vue3.x
+
+- 📊 [ucharts](https://www.ucharts.cn/) - a chart library for uniapp
+
+- 🔰 [uni-simple-router](https://hhyang.cn/v2/) - a router library for uniapp
+
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
@@ -36,6 +42,8 @@
 - 📥 [APIs auto importing](https://github.com/antfu/unplugin-auto-import) - use Composition API and others directly
 
 - 🦾 TypeScript, of course
+
+- 🎉 [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) + [EditorConfig](https://editorconfig.org/)
 
 ## Try it now!
 
