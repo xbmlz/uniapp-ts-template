@@ -1,8 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DemoPage from '@/components/demo/index.vue'
+</script>
 
 <template>
   <view class="container">
-    <text>首页</text>
+    <DemoPage />
   </view>
 </template>
 

@@ -33,8 +33,6 @@
 
 - 📊 [ucharts](https://www.ucharts.cn/) - a chart library for uniapp
 
-- 🔰 [uni-simple-router](https://hhyang.cn/v2/) - a router library for uniapp
-
 - 😃 [Use icons from any icon sets with classes](https://github.com/antfu/unocss/tree/main/packages/preset-icons)
 
 - 🔥 Use the [new `<script setup>` syntax](https://github.com/vuejs/rfcs/pull/227)
