@@ -12,7 +12,7 @@ const appStore = useAppStore()
 
 const loginForm = reactive({
   agree: false,
-  phone: '18519004150',
+  phone: '18500001111',
   code: '123456',
   encryptedData: '',
 })
