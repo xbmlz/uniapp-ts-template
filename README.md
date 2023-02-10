@@ -1,10 +1,10 @@
-# VEnable uniapp
+# Vue Next Uniapp
 
 <p align='center'>
-  <img src='https://raw.githubusercontent.com/venable-team/venable-uniapp/main/src/static/images/logo.png' alt='venable-uniapp' width='120'/>
+  <img src='https://raw.githubusercontent.com/venable-team/venable-uniapp/main/src/static/images/logo.png' alt='vue-next-uniapp' width='120'/>
 </p>
 
-<h1 align="center">VEnable uniapp</h1>
+<h1 align="center">Vue Next Uniapp</h1>
 
 
 <p align="center">
