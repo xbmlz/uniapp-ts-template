@@ -1,1 +1,0 @@
-import{q as e,t as s,w as a,x as t,v as r,A as n,W as f}from"./index.7fe9d8be.js";import{_ as l}from"./plugin-vue_export-helper.f63bf49c.js";const o=l({},[["render",function(l,o){const u=f,d=t;return e(),s(d,null,{default:a((()=>[r(u,null,{default:a((()=>[n("服务须知")])),_:1})])),_:1})}]]);export{o as default};
