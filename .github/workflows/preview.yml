@@ -23,7 +23,7 @@ jobs:
       - name: Setup config ⚙️
         shell: bash
         run: |
-          sed -i  's#VITE_PUBLIC_PATH\s*=.*#VITE_PUBLIC_PATH = /venable-uniapp/#g' ./.env.production
+          sed -i  's#VITE_PUBLIC_PATH\s*=.*#VITE_PUBLIC_PATH = /vue-next-uniapp/#g' ./.env.production
           cat ./.env.production
 
       - name: Install and Build 🔧
